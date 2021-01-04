@@ -1,2 +1,2 @@
-beginner_tutorials
+beginner_tutorials:my_sim
 -DCATKIN_DEVEL_PREFIX=/home/tulgaa/Desktop/ROS/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tulgaa/Desktop/ROS/catkin_ws/install -G Unix Makefiles

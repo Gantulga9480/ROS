@@ -35,6 +35,14 @@
 /home/tulgaa/Desktop/ROS/catkin_ws/build/gtest/googlemock/gtest/CMakeFiles/list_install_components.dir
 /home/tulgaa/Desktop/ROS/catkin_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir
 /home/tulgaa/Desktop/ROS/catkin_ws/build/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/install/strip.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/install/local.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/test.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/list_install_components.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/edit_cache.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/_catkin_empty_exported_target.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/rebuild_cache.dir
+/home/tulgaa/Desktop/ROS/catkin_ws/build/my_sim/CMakeFiles/install.dir
 /home/tulgaa/Desktop/ROS/catkin_ws/build/beginner_tutorials/CMakeFiles/rebuild_cache.dir
 /home/tulgaa/Desktop/ROS/catkin_ws/build/beginner_tutorials/CMakeFiles/test.dir
 /home/tulgaa/Desktop/ROS/catkin_ws/build/beginner_tutorials/CMakeFiles/beginner_tutorials_genlisp.dir
