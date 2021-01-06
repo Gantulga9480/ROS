@@ -1,0 +1,2 @@
+robot1
+-DCATKIN_DEVEL_PREFIX=/home/tulgaa/Desktop/ROS/sim_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tulgaa/Desktop/ROS/sim_ws/install -G Unix Makefiles
