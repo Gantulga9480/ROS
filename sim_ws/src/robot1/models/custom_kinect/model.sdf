@@ -25,13 +25,13 @@
         <camera>
           <horizontal_fov>1.047198</horizontal_fov>
           <image>
-            <width>640</width>
-            <height>480</height>
-            <format>R8G8B8</format>
+            <width>400</width>
+            <height>400</height>
+            <format>RGB8</format>
           </image>
           <clip>
-            <near>0.05</near>
-            <far>3</far>
+            <near>0.5</near>
+            <far>4.5</far>
           </clip>
   	    </camera>
 	      <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
@@ -49,7 +49,7 @@
           <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
           <frameName>camera_link</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
-          <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+          <pointCloudCutoffMax>4.5</pointCloudCutoffMax>
           <distortionK1>0</distortionK1>
           <distortionK2>0</distortionK2>
           <distortionK3>0</distortionK3>

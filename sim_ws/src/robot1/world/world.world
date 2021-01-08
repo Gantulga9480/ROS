@@ -11,11 +11,47 @@
 		<include>
 			<uri>model://ground_plane</uri>
 		</include>
+
 		<!-- My models-->
         <include>
 			<uri>model://custom_kinect</uri>
             <static>true</static>
-            <pose>0 0 3 0 1.57 1.57</pose>
+            <pose>0 0 2 0 1.57 1.57</pose>
+		</include>
+		<include>
+			<uri>model://robot_env_2x2</uri>
+			<static>true</static>
+		</include>
+
+		<!-- Obstacles -->
+		<include>
+			<uri>model://unit_box</uri>
+			<static>true</static>
+			<pose>0.5 0.5 0 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://unit_box</uri>
+			<static>true</static>
+			<pose>0.5 -0.5 0 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://unit_box</uri>
+			<static>true</static>
+			<pose>-0.5 -0.5 0 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://unit_box</uri>
+			<static>true</static>
+			<pose>-0.5 0.5 0 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://unit_box</uri>
+			<static>true</static>
+		</include>
+		<include>
+			<uri>model://robot</uri>
+			<static>false</static>
+			<pose>0 -0.5 0 0 0 0</pose>
 		</include>
 	</world>
 </sdf>
