@@ -128,13 +128,5 @@
                 <xyz>0 1 0</xyz>
             </axis>
         </joint>
-        <include>
-            <uri>model://hokuyo</uri>
-            <pose>0.07 0 0.09 0 0 0</pose>
-        </include>
-        <joint name="hokuyo_joint" type="fixed">
-            <child>hokuyo::link</child>
-            <parent>chassis</parent>
-        </joint>
     </model>
 </sdf>
