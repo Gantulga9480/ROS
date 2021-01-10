@@ -1,10 +1,10 @@
 
 "use strict";
 
-let Depth = require('./Depth.js');
-let Depth = require('./Depth.js');
+let board = require('./board.js');
+let board = require('./board.js');
 
 module.exports = {
-  Depth: Depth,
-  Depth: Depth,
+  board: board,
+  board: board,
 };

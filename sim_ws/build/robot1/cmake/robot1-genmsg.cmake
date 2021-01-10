@@ -1,10 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(WARNING "Invoking generate_messages() without having added any message or service file before.
-You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
-message(STATUS "robot1: 0 messages, 0 services")
+message(STATUS "robot1: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "")
+set(MSG_I_FLAGS "-Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg;-Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,12 +17,23 @@ add_custom_target(robot1_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" NAME_WE)
+add_custom_target(_robot1_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "robot1" "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(robot1
+  "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/robot1
+)
 
 ### Generating Services
 
@@ -40,6 +49,8 @@ add_custom_target(robot1_generate_messages_cpp
 add_dependencies(robot1_generate_messages robot1_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" NAME_WE)
+add_dependencies(robot1_generate_messages_cpp _robot1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robot1_gencpp)
@@ -50,6 +61,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robot1_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(robot1
+  "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/robot1
+)
 
 ### Generating Services
 
@@ -65,6 +82,8 @@ add_custom_target(robot1_generate_messages_eus
 add_dependencies(robot1_generate_messages robot1_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" NAME_WE)
+add_dependencies(robot1_generate_messages_eus _robot1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robot1_geneus)
@@ -75,6 +94,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robot1_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(robot1
+  "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot1
+)
 
 ### Generating Services
 
@@ -90,6 +115,8 @@ add_custom_target(robot1_generate_messages_lisp
 add_dependencies(robot1_generate_messages robot1_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" NAME_WE)
+add_dependencies(robot1_generate_messages_lisp _robot1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robot1_genlisp)
@@ -100,6 +127,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robot1_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(robot1
+  "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/robot1
+)
 
 ### Generating Services
 
@@ -115,6 +148,8 @@ add_custom_target(robot1_generate_messages_nodejs
 add_dependencies(robot1_generate_messages robot1_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" NAME_WE)
+add_dependencies(robot1_generate_messages_nodejs _robot1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robot1_gennodejs)
@@ -125,6 +160,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS robot1_generate_messages_nodejs)
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(robot1
+  "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot1
+)
 
 ### Generating Services
 
@@ -140,6 +181,8 @@ add_custom_target(robot1_generate_messages_py
 add_dependencies(robot1_generate_messages robot1_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg" NAME_WE)
+add_dependencies(robot1_generate_messages_py _robot1_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(robot1_genpy)

@@ -47,10 +47,10 @@ find_package(catkin REQUIRED
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Depth.msg
-# )
+add_message_files(
+  FILES
+  board.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -67,11 +67,11 @@ find_package(catkin REQUIRED
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   robot1
+generate_messages(
+  DEPENDENCIES
+  robot1
 #   std_msgs  # Or other packages containing msgs
-# )
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##

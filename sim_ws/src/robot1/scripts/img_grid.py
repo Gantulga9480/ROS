@@ -7,6 +7,7 @@ import cv2
 import pygame
 import rospy
 from sensor_msgs.msg import Image
+from robot1.msg import board
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -28,6 +29,7 @@ class ImgGrid:
         pygame.init()
         self.bridge = CvBridge()
         self.clock = pygame.time.Clock()
+        self.robot_pos = (30, 20)
         self.is_init = False
         self.grid = None
         self.win = None
@@ -36,7 +38,8 @@ class ImgGrid:
         self.fps = 30
         self.shape = NODE_RES - 1
         self.vel = NODE_RES
-        # self.pub = rospy.Publisher('/cv2_depth_img_raw', Image, queue_size=1)
+        self.ground = None
+        self.pub = rospy.Publisher('/env_grid_data', board, queue_size=1)
 
     def draw_grid(self):
         for i in range(self.grid_width+1):
@@ -54,13 +57,7 @@ class ImgGrid:
         self.grid_height = np.int(img_height/NODE_RES)
         self.grid_width = np.int(img_width/NODE_RES)
         self.grid = np.zeros((self.grid_height, self.grid_width),
-                             dtype=np.bool)
-
-        if not self.is_init:
-            self.is_init = True
-            self.win = pygame.display.set_mode((img_width, img_height))
-            pygame.display.set_caption("GRID {}x{}".format(self.grid_height,
-                                                           self.grid_width))
+                             dtype=np.uint8)
 
         # msg to cv-img
         img = self.bridge.imgmsg_to_cv2(msg)
@@ -70,6 +67,13 @@ class ImgGrid:
         cv2.normalize(image, image, 0, 255, cv2.NORM_MINMAX)
         image = np.round(image).astype(np.uint8)
         image = image.T
+        self.ground = self.get_ground_data(image)
+        if not self.is_init:
+            self.is_init = True
+            self.win = pygame.display.set_mode((img_width, img_height))
+            pygame.display.set_caption("GRID {}x{}".format(self.grid_height,
+                                                           self.grid_width))
+
         rgb_img = image[..., None].repeat(3, -1).astype("uint8")
         surf = pygame.surfarray.make_surface(rgb_img)
         self.win.blit(surf, (0, 0))
@@ -84,17 +88,30 @@ class ImgGrid:
                     for pix_2 in range(i*NODE_RES, (i+1)*NODE_RES-1,
                                        1+PIXEL_SKIP_RATE):
                         pix_sum += image[pix_1][pix_2]
-                if 6000 <= pix_sum <= max_pix_sum:
+                if self.ground - 30 <= pix_sum <= self.ground + 30:
                     # print("MAX at: {}, {}".format(i, j))
-                    self.grid[i][j] = True
+                    self.grid[i][j] = 0
                 else:
-                    self.grid[i][j] = False
+                    self.grid[i][j] = 1
                     pygame.draw.rect(self.win, RED,
                                      (self.vel*j, self.vel*i,
                                       self.vel, self.vel))
+
         self.draw_grid()
         pygame.display.flip()
         self.clock.tick(self.fps)
+        self.pub.publish(self.grid.tobytes())
+
+    def get_ground_data(self, img):
+        pix_sum = 0
+        for pix_1 in range(self.robot_pos[0]*NODE_RES,
+                           (self.robot_pos[0]+1)*NODE_RES-1,
+                           1+PIXEL_SKIP_RATE):
+            for pix_2 in range(self.robot_pos[1]*NODE_RES,
+                               (self.robot_pos[1]+1)*NODE_RES-1,
+                               1+PIXEL_SKIP_RATE):
+                pix_sum += img[pix_1][pix_2]
+        return pix_sum
 
     def main(self):
         rospy.init_node('img_grid_node')
