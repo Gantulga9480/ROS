@@ -12,7 +12,7 @@ class ImgDisp:
 
     def __init__(self):
         self.bridge = CvBridge()
-        self.pub = rospy.Publisher('cv2_depth_img_raw', Image, queue_size=1)
+        # self.pub = rospy.Publisher('/cv2_depth_img_raw', Image, queue_size=1)
 
     def callback1(self, msg):
         print(len(msg.data))
@@ -22,13 +22,13 @@ class ImgDisp:
         img = self.bridge.imgmsg_to_cv2(msg)
         image = np.array(img, dtype=np.float32)
         cv2.normalize(image, image, 0, 255, cv2.NORM_MINMAX)
-        # round to integer values
         image = np.round(image).astype(np.uint8)
+        # cv2.circle(image, (200, 300), 5, (255, 255, 255), 3)
         cv2.imshow('dst_rt', image)
         cv2.waitKey(1)
 
     def main(self):
-        rospy.init_node('im_disp_node')
+        rospy.init_node('img_disp_node')
         rospy.Subscriber('/camera/depth/image_raw', Image, self.callback)
         rospy.spin()
 
