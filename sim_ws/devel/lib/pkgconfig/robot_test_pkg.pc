@@ -1,0 +1,8 @@
+prefix=/home/tulgaa/Desktop/ROS/sim_ws/devel
+
+Name: robot_test_pkg
+Description: Description of robot_test_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

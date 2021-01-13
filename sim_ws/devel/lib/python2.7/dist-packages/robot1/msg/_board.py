@@ -8,12 +8,12 @@ import struct
 
 
 class board(genpy.Message):
-  _md5sum = "8c2595a4679a3b6f30bb5de6a6f5ee2e"
+  _md5sum = "f4fc566b67f0715ec037ec3bb197f924"
   _type = "robot1/board"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """uint8[] table"""
+  _full_text = """uint32[] table"""
   __slots__ = ['table']
-  _slot_types = ['uint8[]']
+  _slot_types = ['uint32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -33,9 +33,9 @@ class board(genpy.Message):
       super(board, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
       if self.table is None:
-        self.table = b''
+        self.table = []
     else:
-      self.table = b''
+      self.table = []
 
   def _get_types(self):
     """
@@ -49,13 +49,10 @@ class board(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.table
-      length = len(_x)
-      # - if encoded as a list instead, serialize as bytes instead of string
-      if type(_x) in [list, tuple]:
-        buff.write(struct.Struct('<I%sB'%length).pack(length, *_x))
-      else:
-        buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      length = len(self.table)
+      buff.write(_struct_I.pack(length))
+      pattern = '<%sI'%length
+      buff.write(struct.Struct(pattern).pack(*self.table))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -70,9 +67,11 @@ class board(genpy.Message):
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
+      pattern = '<%sI'%length
       start = end
-      end += length
-      self.table = str[start:end]
+      s = struct.Struct(pattern)
+      end += s.size
+      self.table = s.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -85,13 +84,10 @@ class board(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.table
-      length = len(_x)
-      # - if encoded as a list instead, serialize as bytes instead of string
-      if type(_x) in [list, tuple]:
-        buff.write(struct.Struct('<I%sB'%length).pack(length, *_x))
-      else:
-        buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
+      length = len(self.table)
+      buff.write(_struct_I.pack(length))
+      pattern = '<%sI'%length
+      buff.write(self.table.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -107,9 +103,11 @@ class board(genpy.Message):
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
+      pattern = '<%sI'%length
       start = end
-      end += length
-      self.table = str[start:end]
+      s = struct.Struct(pattern)
+      end += s.size
+      self.table = numpy.frombuffer(str[start:end], dtype=numpy.uint32, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill

@@ -33,7 +33,7 @@ class board {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type board
     // Serialize message field [table]
-    bufferOffset = _arraySerializer.uint8(obj.table, buffer, bufferOffset, null);
+    bufferOffset = _arraySerializer.uint32(obj.table, buffer, bufferOffset, null);
     return bufferOffset;
   }
 
@@ -42,13 +42,13 @@ class board {
     let len;
     let data = new board(null);
     // Deserialize message field [table]
-    data.table = _arrayDeserializer.uint8(buffer, bufferOffset, null)
+    data.table = _arrayDeserializer.uint32(buffer, bufferOffset, null)
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.table.length;
+    length += 4 * object.table.length;
     return length + 4;
   }
 
@@ -59,13 +59,13 @@ class board {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '8c2595a4679a3b6f30bb5de6a6f5ee2e';
+    return 'f4fc566b67f0715ec037ec3bb197f924';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    uint8[] table
+    uint32[] table
     `;
   }
 

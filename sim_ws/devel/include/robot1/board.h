@@ -33,7 +33,7 @@ struct board_
 
 
 
-   typedef std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other >  _table_type;
+   typedef std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other >  _table_type;
   _table_type table;
 
 
@@ -122,12 +122,12 @@ struct MD5Sum< ::robot1::board_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "8c2595a4679a3b6f30bb5de6a6f5ee2e";
+    return "f4fc566b67f0715ec037ec3bb197f924";
   }
 
   static const char* value(const ::robot1::board_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x8c2595a4679a3b6fULL;
-  static const uint64_t static_value2 = 0x30bb5de6a6f5ee2eULL;
+  static const uint64_t static_value1 = 0xf4fc566b67f0715eULL;
+  static const uint64_t static_value2 = 0xc037ec3bb197f924ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,7 +146,7 @@ struct Definition< ::robot1::board_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint8[] table\n"
+    return "uint32[] table\n"
 ;
   }
 
@@ -188,7 +188,7 @@ struct Printer< ::robot1::board_<ContainerAllocator> >
     for (size_t i = 0; i < v.table.size(); ++i)
     {
       s << indent << "  table[" << i << "]: ";
-      Printer<uint8_t>::stream(s, indent + "  ", v.table[i]);
+      Printer<uint32_t>::stream(s, indent + "  ", v.table[i]);
     }
   }
 };

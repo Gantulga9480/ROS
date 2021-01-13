@@ -19,6 +19,9 @@ YELLOW = (255, 255, 0)
 NODE_RES = 10
 PIXEL_SKIP_RATE = 1
 
+OBS_HEIGHT = 0.3
+CAMERA_HEIGHT = 2
+
 WIN_WIDTH = 500
 WIN_HEIGHT = 500
 
@@ -49,6 +52,11 @@ class ImgGrid:
             pygame.draw.line(self.win, BLACK, (0, i*self.vel),
                              (self.grid_height*self.vel, i*self.vel))
 
+    def draw_node(self, i, j):
+        pygame.draw.rect(self.win, RED,
+                         (self.vel*j, self.vel*i,
+                          self.vel, self.vel))
+
     def callback(self, msg):
 
         img_height = msg.height
@@ -67,9 +75,9 @@ class ImgGrid:
         cv2.normalize(image, image, 0, 255, cv2.NORM_MINMAX)
         image = np.round(image).astype(np.uint8)
         image = image.T
-        self.ground = self.get_ground_data(image)
         if not self.is_init:
             self.is_init = True
+            self.ground = self.get_ground_data(image)
             self.win = pygame.display.set_mode((img_width, img_height))
             pygame.display.set_caption("GRID {}x{}".format(self.grid_height,
                                                            self.grid_width))
@@ -87,15 +95,16 @@ class ImgGrid:
                                    1+PIXEL_SKIP_RATE):
                     for pix_2 in range(i*NODE_RES, (i+1)*NODE_RES-1,
                                        1+PIXEL_SKIP_RATE):
-                        pix_sum += image[pix_1][pix_2]
+                        pix_sum += image[pix_2][pix_1]
                 if self.ground - 30 <= pix_sum <= self.ground + 30:
                     # print("MAX at: {}, {}".format(i, j))
                     self.grid[i][j] = 0
-                else:
+                elif pix_sum <= 300:
                     self.grid[i][j] = 1
-                    pygame.draw.rect(self.win, RED,
-                                     (self.vel*j, self.vel*i,
-                                      self.vel, self.vel))
+
+                    self.draw_node(i, j)
+                else:
+                    pass
 
         self.draw_grid()
         pygame.display.flip()
@@ -112,6 +121,12 @@ class ImgGrid:
                                1+PIXEL_SKIP_RATE):
                 pix_sum += img[pix_1][pix_2]
         return pix_sum
+
+    def get_dist(self, i, j):
+        dx = 19.5 - i
+        dy = 19.5 - j
+        ground_y = 
+
 
     def main(self):
         rospy.init_node('img_grid_node')
