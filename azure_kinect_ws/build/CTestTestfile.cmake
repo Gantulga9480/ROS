@@ -5,4 +5,4 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("Azure_Kinect_ROS_Driver")
+subdirs("azure_kinect_ros_driver")

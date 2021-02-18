@@ -131,7 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/tulgaa/Desktop/ROS/azure_kinect_ws/build/gtest/cmake_install.cmake")
-  include("/home/tulgaa/Desktop/ROS/azure_kinect_ws/build/Azure_Kinect_ROS_Driver/cmake_install.cmake")
+  include("/home/tulgaa/Desktop/ROS/azure_kinect_ws/build/azure_kinect_ros_driver/cmake_install.cmake")
 
 endif()
 

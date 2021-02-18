@@ -47,10 +47,10 @@ class ImgGrid:
     def draw_grid(self):
         for i in range(self.grid_width+1):
             pygame.draw.line(self.win, BLACK, (i*self.vel, 0),
-                             (i*self.vel, self.grid_width*self.vel))
+                             (i*self.vel, self.grid_height*self.vel))
         for i in range(self.grid_height+1):
             pygame.draw.line(self.win, BLACK, (0, i*self.vel),
-                             (self.grid_height*self.vel, i*self.vel))
+                             (self.grid_width*self.vel, i*self.vel))
 
     def draw_node(self, i, j):
         pygame.draw.rect(self.win, RED,
@@ -125,7 +125,7 @@ class ImgGrid:
     def get_dist(self, i, j):
         dx = 19.5 - i
         dy = 19.5 - j
-        ground_y = 
+        ground_y = 0
 
 
     def main(self):

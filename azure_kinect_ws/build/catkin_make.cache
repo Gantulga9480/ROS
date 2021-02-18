@@ -1,2 +1,2 @@
-Azure_Kinect_ROS_Driver
+azure_kinect_ros_driver
 -DCATKIN_DEVEL_PREFIX=/home/tulgaa/Desktop/ROS/azure_kinect_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tulgaa/Desktop/ROS/azure_kinect_ws/install -G Unix Makefiles

@@ -15,21 +15,21 @@ from keras.callbacks import EarlyStopping
 # rom keras.losses import huber_loss
 #Hyperparameters
 gamma = 0.9
-lr =0.001
-lr_decay=0.5
-num_iterations =5000
-epochs=100
-epsilon =0
-epsilon_decay =0.9999
-min_epsilon=0.2
-delay_time=0.1
-vels=[[1,0],[0.5,1],[0.5,-1],[0,1],[0,-1],[-0.8,0]]
-legal_actions=len(vels)
-batch_size=64
-memory_size=4000
+lr = 0.001
+lr_decay = 0.5
+num_iterations = 5000
+epochs = 30
+epsilon = 0
+epsilon_decay = 0.9999
+min_epsilon = 0.2
+delay_time = 0.1
+vels = [[1,0],[0.5,1],[0.5,-1],[0,1],[0,-1],[-0.8,0]]
+legal_actions = len(vels)
+batch_size = 64
+memory_size = 4000
 memory = deque(maxlen=memory_size)
-reward_temp=0
-rospy.init_node('Mobile_Control',anonymous=True)
+reward_temp = 0
+rospy.init_node('Mobile_Control', anonymous=True)
 Robot = deep_mobile_control()
 Robot.reset()
 
@@ -60,7 +60,7 @@ target_model=load_model('model_2.h5')
 early_stop=EarlyStopping(monitor='loss', min_delta=0, patience=40, verbose=0, mode='auto', baseline=None, restore_best_weights=True)
 #optimizer=Adagrad(learning_rate=0.0000000001)
 #loss=huber_loss(delta=1)
-model.compile(loss='mean_squared_error',optimizer=optimizer)
+model.compile(loss='mean_squared_error',optimizer=optimizer, verbos=0)
 
 def main():    
     try:
@@ -70,10 +70,10 @@ def main():
         print(a)
     except:
         print("Error occured. Can't subscribe sensor info")
-    #experience_replay()
-    #train_model()   
-    #plot_loss_history()
-    #plot_reward()
+    # experience_replay()
+    # train_model()   
+    # plot_loss_history()
+    # plot_reward()
     test_model()
 def train_model():
     global lr,reward_temp
@@ -105,11 +105,11 @@ def train_model():
             batches=random.sample(memory,batch_size)
         else:
             batches=memory
-        states= np.array([batch[0] for batch in batches])
-        rewards= np.array([batch[1] for batch in batches])
-        actions= np.array([batch[2] for batch in batches])
-        new_states= np.array([batch[3] for batch in batches])
-        Qs =model.predict(states)
+        states = np.array([batch[0] for batch in batches])
+        rewards = np.array([batch[1] for batch in batches])
+        actions = np.array([batch[2] for batch in batches])
+        new_states = np.array([batch[3] for batch in batches])
+        Qs = model.predict(states)
 
         next_state_Qs = target_model.predict(new_states)
         for i in range(len(rewards)):

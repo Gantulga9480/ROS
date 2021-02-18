@@ -1,0 +1,8 @@
+prefix=/home/tulgaa/Desktop/ROS/azure_kinect_ws/devel
+
+Name: azure_kinect
+Description: Description of azure_kinect
+Version: 0.9.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

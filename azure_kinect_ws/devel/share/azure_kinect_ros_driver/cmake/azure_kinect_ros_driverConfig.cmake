@@ -67,7 +67,7 @@ set(azure_kinect_ros_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(azure_kinect_ros_driver_SOURCE_PREFIX /home/tulgaa/Desktop/ROS/azure_kinect_ws/src/Azure_Kinect_ROS_Driver)
+  set(azure_kinect_ros_driver_SOURCE_PREFIX /home/tulgaa/Desktop/ROS/azure_kinect_ws/src/azure_kinect_ros_driver)
   set(azure_kinect_ros_driver_DEVEL_PREFIX /home/tulgaa/Desktop/ROS/azure_kinect_ws/devel)
   set(azure_kinect_ros_driver_INSTALL_PREFIX "")
   set(azure_kinect_ros_driver_PREFIX ${azure_kinect_ros_driver_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'azure_kinect_ros_driver' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'azure_kinect_ros_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/tulgaa/Desktop/ROS/azure_kinect_ws/src/Azure_Kinect_ROS_Driver/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'azure_kinect_ros_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/tulgaa/Desktop/ROS/azure_kinect_ws/src/azure_kinect_ros_driver/${idir}'.  ${_report}")
     endif()
     _list_append_unique(azure_kinect_ros_driver_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/tulgaa/Desktop/ROS/azure_kinect_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/tulgaa/Desktop/ROS/azure_kinect_ws/devel/lib;/home/tulgaa/Desktop/ROS/azure_kinect_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

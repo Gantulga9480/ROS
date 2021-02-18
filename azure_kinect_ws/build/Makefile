@@ -294,7 +294,7 @@ azure_kinect_ros_driver_nodelet: cmake_check_build_system
 
 # fast build rule for target.
 azure_kinect_ros_driver_nodelet/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/azure_kinect_ros_driver_nodelet.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/azure_kinect_ros_driver_nodelet.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/azure_kinect_ros_driver_nodelet.dir/build.make azure_kinect_ros_driver/CMakeFiles/azure_kinect_ros_driver_nodelet.dir/build
 .PHONY : azure_kinect_ros_driver_nodelet/fast
 
 #=============================================================================
@@ -307,7 +307,7 @@ azure_kinect_ros_driver_node: cmake_check_build_system
 
 # fast build rule for target.
 azure_kinect_ros_driver_node/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/azure_kinect_ros_driver_node.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/azure_kinect_ros_driver_node.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/azure_kinect_ros_driver_node.dir/build.make azure_kinect_ros_driver/CMakeFiles/azure_kinect_ros_driver_node.dir/build
 .PHONY : azure_kinect_ros_driver_node/fast
 
 #=============================================================================
@@ -320,7 +320,7 @@ actionlib_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 #=============================================================================
@@ -333,7 +333,7 @@ actionlib_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -346,7 +346,7 @@ actionlib_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 #=============================================================================
@@ -359,7 +359,7 @@ actionlib_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -372,7 +372,7 @@ actionlib_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 .PHONY : actionlib_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -385,7 +385,7 @@ actionlib_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -398,7 +398,7 @@ actionlib_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -411,7 +411,7 @@ tf2_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -424,7 +424,7 @@ tf2_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -437,7 +437,7 @@ tf2_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -450,7 +450,7 @@ tf2_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -463,7 +463,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -476,7 +476,7 @@ bond_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
 
 #=============================================================================
@@ -489,7 +489,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -502,7 +502,7 @@ rosgraph_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -515,7 +515,7 @@ rosgraph_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -528,7 +528,7 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -541,7 +541,7 @@ rosgraph_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -554,7 +554,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -567,7 +567,7 @@ sensor_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -580,7 +580,7 @@ sensor_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -593,7 +593,7 @@ actionlib_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -606,7 +606,7 @@ nodelet_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
 
 #=============================================================================
@@ -619,7 +619,7 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -632,7 +632,7 @@ bond_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_eus.dir/build
 .PHONY : bond_generate_messages_eus/fast
 
 #=============================================================================
@@ -645,7 +645,7 @@ roscpp_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
@@ -658,7 +658,7 @@ geometry_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -671,7 +671,7 @@ roscpp_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 #=============================================================================
@@ -684,7 +684,7 @@ roscpp_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -697,7 +697,7 @@ roscpp_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
@@ -710,7 +710,7 @@ geometry_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -723,7 +723,7 @@ sensor_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -736,7 +736,7 @@ actionlib_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 #=============================================================================
@@ -749,7 +749,7 @@ roscpp_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
@@ -762,7 +762,7 @@ sensor_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -775,7 +775,7 @@ sensor_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -788,7 +788,7 @@ actionlib_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 #=============================================================================
@@ -801,7 +801,7 @@ nodelet_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 .PHONY : nodelet_generate_messages_cpp/fast
 
 #=============================================================================
@@ -814,7 +814,7 @@ bond_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
 
 #=============================================================================
@@ -827,7 +827,7 @@ geometry_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -840,7 +840,7 @@ geometry_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -853,7 +853,7 @@ geometry_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -866,7 +866,7 @@ nodelet_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_eus/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_eus.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_eus.dir/build.make azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_eus.dir/build
 .PHONY : nodelet_generate_messages_eus/fast
 
 #=============================================================================
@@ -879,7 +879,7 @@ nodelet_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 .PHONY : nodelet_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -892,7 +892,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -905,7 +905,7 @@ nodelet_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 nodelet_generate_messages_py/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_py.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/nodelet_generate_messages_py.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_py.dir/build.make azure_kinect_ros_driver/CMakeFiles/nodelet_generate_messages_py.dir/build
 .PHONY : nodelet_generate_messages_py/fast
 
 #=============================================================================
@@ -918,7 +918,7 @@ bond_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_nodejs.dir/build
 .PHONY : bond_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -931,7 +931,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make azure_kinect_ros_driver/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -944,7 +944,7 @@ bond_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_lisp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_lisp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/bond_generate_messages_lisp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_lisp.dir/build.make azure_kinect_ros_driver/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
 
 #=============================================================================
@@ -957,7 +957,7 @@ tf2_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make Azure_Kinect_ROS_Driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make azure_kinect_ros_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Help Target

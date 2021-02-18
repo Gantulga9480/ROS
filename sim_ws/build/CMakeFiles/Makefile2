@@ -860,6 +860,24 @@ clean: robot1/CMakeFiles/robot1_genpy.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory test_pkg
+
+# Convenience name for "all" pass in the directory.
+test_pkg/all:
+
+.PHONY : test_pkg/all
+
+# Convenience name for "clean" pass in the directory.
+test_pkg/clean:
+
+.PHONY : test_pkg/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test_pkg/preinstall:
+
+.PHONY : test_pkg/preinstall
+
+#=============================================================================
 # Directory level rules for directory robot_test_pkg
 
 # Convenience name for "all" pass in the directory.
