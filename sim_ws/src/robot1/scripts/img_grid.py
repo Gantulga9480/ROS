@@ -1,13 +1,9 @@
-#!/usr/bin/env python
-
-# from __future__ import print_function
 import numpy as np
 from cv_bridge import CvBridge
 import cv2
 import pygame
 import rospy
 from sensor_msgs.msg import Image
-from robot1.msg import board
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -17,7 +13,7 @@ BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
 
 NODE_RES = 10
-PIXEL_SKIP_RATE = 1
+PIXEL_SKIP_RATE = 2
 
 OBS_HEIGHT = 0.3
 CAMERA_HEIGHT = 2
@@ -42,7 +38,8 @@ class ImgGrid:
         self.shape = NODE_RES - 1
         self.vel = NODE_RES
         self.ground = None
-        self.pub = rospy.Publisher('/env_grid_data', board, queue_size=1)
+        self.robot_color = None
+        # self.pub = rospy.Publisher('/env_grid_data', board, queue_size=1)
 
     def draw_grid(self):
         for i in range(self.grid_width+1):
@@ -52,18 +49,19 @@ class ImgGrid:
             pygame.draw.line(self.win, BLACK, (0, i*self.vel),
                              (self.grid_width*self.vel, i*self.vel))
 
-    def draw_node(self, i, j):
-        pygame.draw.rect(self.win, RED,
-                         (self.vel*j, self.vel*i,
+    def draw_node(self, i, j, color):
+        pygame.draw.rect(self.win, color,
+                         (self.vel*i, self.vel*j,
                           self.vel, self.vel))
 
     def callback(self, msg):
+        self.pygame_event()
 
         img_height = msg.height
         img_width = msg.width
 
-        self.grid_height = np.int(img_height/NODE_RES)
-        self.grid_width = np.int(img_width/NODE_RES)
+        self.grid_height = img_height//NODE_RES
+        self.grid_width = img_width//NODE_RES
         self.grid = np.zeros((self.grid_height, self.grid_width),
                              dtype=np.uint8)
 
@@ -77,11 +75,15 @@ class ImgGrid:
         image = image.T
         if not self.is_init:
             self.is_init = True
-            self.ground = self.get_ground_data(image)
+            self.ground = self.get_ground_data(image, (self.grid_width+4)//2,
+                                               self.grid_height//2)
+            self.robot_color = self.get_ground_data(image, self.grid_width//2-1,
+                                                    self.grid_height//2-1)
             self.win = pygame.display.set_mode((img_width, img_height))
             pygame.display.set_caption("GRID {}x{}".format(self.grid_height,
                                                            self.grid_width))
-
+            print(self.robot_color)
+            print(self.ground)
         rgb_img = image[..., None].repeat(3, -1).astype("uint8")
         surf = pygame.surfarray.make_surface(rgb_img)
         self.win.blit(surf, (0, 0))
@@ -96,28 +98,37 @@ class ImgGrid:
                     for pix_2 in range(i*NODE_RES, (i+1)*NODE_RES-1,
                                        1+PIXEL_SKIP_RATE):
                         pix_sum += image[pix_2][pix_1]
-                if self.ground - 30 <= pix_sum <= self.ground + 30:
+                if self.robot_color - 10 <= pix_sum <= self.robot_color + 10:
+                    self.draw_node(i, j, GREEN)
+                elif self.ground - 5 <= pix_sum <= self.ground + 5:
                     # print("MAX at: {}, {}".format(i, j))
                     self.grid[i][j] = 0
                 elif pix_sum <= 300:
                     self.grid[i][j] = 1
-
-                    self.draw_node(i, j)
+                    self.draw_node(i, j, RED)
                 else:
                     pass
 
         self.draw_grid()
         pygame.display.flip()
-        self.clock.tick(self.fps)
-        self.pub.publish(self.grid.tobytes())
+        # self.clock.tick(self.fps)
+        # self.pub.publish(self.grid.tobytes())
 
-    def get_ground_data(self, img):
-        pix_sum = 0
-        for pix_1 in range(self.robot_pos[0]*NODE_RES,
-                           (self.robot_pos[0]+1)*NODE_RES-1,
+    def pygame_event(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                rospy.signal_shutdown("EXIT")
+                quit()
+            elif event.type == pygame.KEYDOWN:
+                pass
+
+    def get_ground_data(self, img, w, h):
+        pix_sum = 0 
+        for pix_1 in range(h*NODE_RES,
+                           (h+1)*NODE_RES-1,
                            1+PIXEL_SKIP_RATE):
-            for pix_2 in range(self.robot_pos[1]*NODE_RES,
-                               (self.robot_pos[1]+1)*NODE_RES-1,
+            for pix_2 in range(w*NODE_RES,
+                               (w+1)*NODE_RES-1,
                                1+PIXEL_SKIP_RATE):
                 pix_sum += img[pix_1][pix_2]
         return pix_sum

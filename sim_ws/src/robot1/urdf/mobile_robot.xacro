@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="differential_wheeled_robot" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find test_pkg)/urdf/wheel.urdf.xacro" /> 
+  <xacro:include filename="$(find robot1)/urdf/wheel.urdf.xacro" /> 
  
 <!-- Defining the colors used in this robot -->
   <material name="Black">
@@ -279,7 +279,7 @@
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <legacyMode>true</legacyMode>
-      <rosDebugLevel>Debug</rosDebugLevel>
+      <!-- <rosDebugLevel>Debug</rosDebugLevel> -->
       <publishWheelTF>false</publishWheelTF>
       <robotNamespace>/</robotNamespace>
       <publishTf>1</publishTf>
