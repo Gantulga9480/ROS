@@ -13,7 +13,11 @@
 		</include>
 
 		<!-- My models-->
-
+		<include>
+			<uri>model://kinect</uri>
+            <static>true</static>
+            <pose>0 0 3 0 1.57 1.57</pose>
+		</include>
 		<!-- Obstacles -->
 	</world>
 </sdf>

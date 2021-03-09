@@ -3,7 +3,5 @@
   (:export
    "<BOARD>"
    "BOARD"
-   "<BOARD>"
-   "BOARD"
   ))
 

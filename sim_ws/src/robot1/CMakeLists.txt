@@ -9,7 +9,9 @@ project(robot1)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED
   COMPONENTS
+  roscpp
   rospy
+  std_msgs
   message_generation
 )
 
@@ -69,8 +71,7 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  robot1
-#   std_msgs  # Or other packages containing msgs
+  std_msgs  # Or other packages containing msgs
 )
 
 ################################################

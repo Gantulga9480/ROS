@@ -2,7 +2,7 @@
 
 message(STATUS "robot1: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg;-Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg")
+set(MSG_I_FLAGS "-Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -200,8 +200,8 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ro
     DESTINATION ${gencpp_INSTALL_DIR}
   )
 endif()
-if(TARGET robot1_generate_messages_cpp)
-  add_dependencies(robot1_generate_messages_cpp robot1_generate_messages_cpp)
+if(TARGET std_msgs_generate_messages_cpp)
+  add_dependencies(robot1_generate_messages_cpp std_msgs_generate_messages_cpp)
 endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/robot1)
@@ -211,8 +211,8 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ro
     DESTINATION ${geneus_INSTALL_DIR}
   )
 endif()
-if(TARGET robot1_generate_messages_eus)
-  add_dependencies(robot1_generate_messages_eus robot1_generate_messages_eus)
+if(TARGET std_msgs_generate_messages_eus)
+  add_dependencies(robot1_generate_messages_eus std_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/robot1)
@@ -222,8 +222,8 @@ if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/
     DESTINATION ${genlisp_INSTALL_DIR}
   )
 endif()
-if(TARGET robot1_generate_messages_lisp)
-  add_dependencies(robot1_generate_messages_lisp robot1_generate_messages_lisp)
+if(TARGET std_msgs_generate_messages_lisp)
+  add_dependencies(robot1_generate_messages_lisp std_msgs_generate_messages_lisp)
 endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/robot1)
@@ -233,8 +233,8 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
     DESTINATION ${gennodejs_INSTALL_DIR}
   )
 endif()
-if(TARGET robot1_generate_messages_nodejs)
-  add_dependencies(robot1_generate_messages_nodejs robot1_generate_messages_nodejs)
+if(TARGET std_msgs_generate_messages_nodejs)
+  add_dependencies(robot1_generate_messages_nodejs std_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robot1)
@@ -245,6 +245,6 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/robo
     DESTINATION ${genpy_INSTALL_DIR}
   )
 endif()
-if(TARGET robot1_generate_messages_py)
-  add_dependencies(robot1_generate_messages_py robot1_generate_messages_py)
+if(TARGET std_msgs_generate_messages_py)
+  add_dependencies(robot1_generate_messages_py std_msgs_generate_messages_py)
 endif()

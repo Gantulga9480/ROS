@@ -1,4 +1,6 @@
 (cl:in-package robot1-msg)
-(cl:export '(TABLE-VAL
-          TABLE
+(cl:export '(ROBOT_X-VAL
+          ROBOT_X
+          ROBOT_Y-VAL
+          ROBOT_Y
 ))

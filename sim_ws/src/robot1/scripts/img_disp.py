@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-# from __future__ import print_function
 import numpy as np
 from cv_bridge import CvBridge
 import cv2
@@ -29,7 +26,7 @@ class ImgDisp:
 
     def main(self):
         rospy.init_node('img_disp_node')
-        rospy.Subscriber('/camera/depth/image_raw', Image, self.callback)
+        rospy.Subscriber('/camera/color/image_raw', Image, self.callback)
         rospy.spin()
 
 

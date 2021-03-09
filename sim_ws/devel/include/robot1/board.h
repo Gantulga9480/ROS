@@ -24,17 +24,22 @@ struct board_
   typedef board_<ContainerAllocator> Type;
 
   board_()
-    : table()  {
+    : robot_x(0)
+    , robot_y(0)  {
     }
   board_(const ContainerAllocator& _alloc)
-    : table(_alloc)  {
+    : robot_x(0)
+    , robot_y(0)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::vector<uint32_t, typename ContainerAllocator::template rebind<uint32_t>::other >  _table_type;
-  _table_type table;
+   typedef uint32_t _robot_x_type;
+  _robot_x_type robot_x;
+
+   typedef uint32_t _robot_y_type;
+  _robot_y_type robot_y;
 
 
 
@@ -65,7 +70,8 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::robot1::board_<ContainerAllocator1> & lhs, const ::robot1::board_<ContainerAllocator2> & rhs)
 {
-  return lhs.table == rhs.table;
+  return lhs.robot_x == rhs.robot_x &&
+    lhs.robot_y == rhs.robot_y;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -88,12 +94,12 @@ namespace message_traits
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::robot1::board_<ContainerAllocator> >
-  : FalseType
+  : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::robot1::board_<ContainerAllocator> const>
-  : FalseType
+  : TrueType
   { };
 
 template <class ContainerAllocator>
@@ -122,12 +128,12 @@ struct MD5Sum< ::robot1::board_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "f4fc566b67f0715ec037ec3bb197f924";
+    return "3c388db48c5cd0fed06741e9101f00f3";
   }
 
   static const char* value(const ::robot1::board_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xf4fc566b67f0715eULL;
-  static const uint64_t static_value2 = 0xc037ec3bb197f924ULL;
+  static const uint64_t static_value1 = 0x3c388db48c5cd0feULL;
+  static const uint64_t static_value2 = 0xd06741e9101f00f3ULL;
 };
 
 template<class ContainerAllocator>
@@ -146,7 +152,8 @@ struct Definition< ::robot1::board_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint32[] table\n"
+    return "uint32 robot_x\n"
+"uint32 robot_y\n"
 ;
   }
 
@@ -165,7 +172,8 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.table);
+      stream.next(m.robot_x);
+      stream.next(m.robot_y);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -184,12 +192,10 @@ struct Printer< ::robot1::board_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robot1::board_<ContainerAllocator>& v)
   {
-    s << indent << "table[]" << std::endl;
-    for (size_t i = 0; i < v.table.size(); ++i)
-    {
-      s << indent << "  table[" << i << "]: ";
-      Printer<uint32_t>::stream(s, indent + "  ", v.table[i]);
-    }
+    s << indent << "robot_x: ";
+    Printer<uint32_t>::stream(s, indent + "  ", v.robot_x);
+    s << indent << "robot_y: ";
+    Printer<uint32_t>::stream(s, indent + "  ", v.robot_y);
   }
 };
 

@@ -1,1 +1,2 @@
-uint32[] table
+uint32 robot_x
+uint32 robot_y

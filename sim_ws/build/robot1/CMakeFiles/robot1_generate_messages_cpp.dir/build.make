@@ -60,7 +60,7 @@ robot1/CMakeFiles/robot1_generate_messages_cpp: /home/tulgaa/Desktop/ROS/sim_ws/
 /home/tulgaa/Desktop/ROS/sim_ws/devel/include/robot1/board.h: /home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg
 /home/tulgaa/Desktop/ROS/sim_ws/devel/include/robot1/board.h: /opt/ros/melodic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/tulgaa/Desktop/ROS/sim_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from robot1/board.msg"
-	cd /home/tulgaa/Desktop/ROS/sim_ws/src/robot1 && /home/tulgaa/Desktop/ROS/sim_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg -Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg -Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg -p robot1 -o /home/tulgaa/Desktop/ROS/sim_ws/devel/include/robot1 -e /opt/ros/melodic/share/gencpp/cmake/..
+	cd /home/tulgaa/Desktop/ROS/sim_ws/src/robot1 && /home/tulgaa/Desktop/ROS/sim_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg/board.msg -Irobot1:/home/tulgaa/Desktop/ROS/sim_ws/src/robot1/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p robot1 -o /home/tulgaa/Desktop/ROS/sim_ws/devel/include/robot1 -e /opt/ros/melodic/share/gencpp/cmake/..
 
 robot1_generate_messages_cpp: robot1/CMakeFiles/robot1_generate_messages_cpp
 robot1_generate_messages_cpp: /home/tulgaa/Desktop/ROS/sim_ws/devel/include/robot1/board.h

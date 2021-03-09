@@ -8,12 +8,13 @@ import struct
 
 
 class board(genpy.Message):
-  _md5sum = "f4fc566b67f0715ec037ec3bb197f924"
+  _md5sum = "3c388db48c5cd0fed06741e9101f00f3"
   _type = "robot1/board"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """uint32[] table"""
-  __slots__ = ['table']
-  _slot_types = ['uint32[]']
+  _full_text = """uint32 robot_x
+uint32 robot_y"""
+  __slots__ = ['robot_x','robot_y']
+  _slot_types = ['uint32','uint32']
 
   def __init__(self, *args, **kwds):
     """
@@ -23,7 +24,7 @@ class board(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       table
+       robot_x,robot_y
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -32,10 +33,13 @@ class board(genpy.Message):
     if args or kwds:
       super(board, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.table is None:
-        self.table = []
+      if self.robot_x is None:
+        self.robot_x = 0
+      if self.robot_y is None:
+        self.robot_y = 0
     else:
-      self.table = []
+      self.robot_x = 0
+      self.robot_y = 0
 
   def _get_types(self):
     """
@@ -49,10 +53,8 @@ class board(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      length = len(self.table)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%sI'%length
-      buff.write(struct.Struct(pattern).pack(*self.table))
+      _x = self
+      buff.write(_get_struct_2I().pack(_x.robot_x, _x.robot_y))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -64,14 +66,10 @@ class board(genpy.Message):
     codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sI'%length
-      start = end
-      s = struct.Struct(pattern)
-      end += s.size
-      self.table = s.unpack(str[start:end])
+      end += 8
+      (_x.robot_x, _x.robot_y,) = _get_struct_2I().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -84,10 +82,8 @@ class board(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      length = len(self.table)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%sI'%length
-      buff.write(self.table.tostring())
+      _x = self
+      buff.write(_get_struct_2I().pack(_x.robot_x, _x.robot_y))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -100,14 +96,10 @@ class board(genpy.Message):
     codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      _x = self
       start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sI'%length
-      start = end
-      s = struct.Struct(pattern)
-      end += s.size
-      self.table = numpy.frombuffer(str[start:end], dtype=numpy.uint32, count=length)
+      end += 8
+      (_x.robot_x, _x.robot_y,) = _get_struct_2I().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -116,3 +108,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_2I = None
+def _get_struct_2I():
+    global _struct_2I
+    if _struct_2I is None:
+        _struct_2I = struct.Struct("<2I")
+    return _struct_2I

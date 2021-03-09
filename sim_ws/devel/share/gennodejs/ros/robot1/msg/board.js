@@ -18,22 +18,31 @@ class board {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.table = null;
+      this.robot_x = null;
+      this.robot_y = null;
     }
     else {
-      if (initObj.hasOwnProperty('table')) {
-        this.table = initObj.table
+      if (initObj.hasOwnProperty('robot_x')) {
+        this.robot_x = initObj.robot_x
       }
       else {
-        this.table = [];
+        this.robot_x = 0;
+      }
+      if (initObj.hasOwnProperty('robot_y')) {
+        this.robot_y = initObj.robot_y
+      }
+      else {
+        this.robot_y = 0;
       }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type board
-    // Serialize message field [table]
-    bufferOffset = _arraySerializer.uint32(obj.table, buffer, bufferOffset, null);
+    // Serialize message field [robot_x]
+    bufferOffset = _serializer.uint32(obj.robot_x, buffer, bufferOffset);
+    // Serialize message field [robot_y]
+    bufferOffset = _serializer.uint32(obj.robot_y, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -41,15 +50,15 @@ class board {
     //deserializes a message object of type board
     let len;
     let data = new board(null);
-    // Deserialize message field [table]
-    data.table = _arrayDeserializer.uint32(buffer, bufferOffset, null)
+    // Deserialize message field [robot_x]
+    data.robot_x = _deserializer.uint32(buffer, bufferOffset);
+    // Deserialize message field [robot_y]
+    data.robot_y = _deserializer.uint32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    let length = 0;
-    length += 4 * object.table.length;
-    return length + 4;
+    return 8;
   }
 
   static datatype() {
@@ -59,13 +68,14 @@ class board {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'f4fc566b67f0715ec037ec3bb197f924';
+    return '3c388db48c5cd0fed06741e9101f00f3';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    uint32[] table
+    uint32 robot_x
+    uint32 robot_y
     `;
   }
 
@@ -75,11 +85,18 @@ class board {
       msg = {};
     }
     const resolved = new board(null);
-    if (msg.table !== undefined) {
-      resolved.table = msg.table;
+    if (msg.robot_x !== undefined) {
+      resolved.robot_x = msg.robot_x;
     }
     else {
-      resolved.table = []
+      resolved.robot_x = 0
+    }
+
+    if (msg.robot_y !== undefined) {
+      resolved.robot_y = msg.robot_y;
+    }
+    else {
+      resolved.robot_y = 0
     }
 
     return resolved;
